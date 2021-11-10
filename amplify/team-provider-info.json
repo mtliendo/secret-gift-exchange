@@ -1,0 +1,27 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-secretgiftexchange-dev-222452-authRole",
+      "UnauthRoleArn": "arn:aws:iam::521776702104:role/amplify-secretgiftexchange-dev-222452-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::521776702104:role/amplify-secretgiftexchange-dev-222452-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-secretgiftexchange-dev-222452-deployment",
+      "UnauthRoleName": "amplify-secretgiftexchange-dev-222452-unauthRole",
+      "StackName": "amplify-secretgiftexchange-dev-222452",
+      "StackId": "arn:aws:cloudformation:us-east-1:521776702104:stack/amplify-secretgiftexchange-dev-222452/2897b9a0-41de-11ec-819c-0ef636b25e3d",
+      "AmplifyAppId": "d7iqyoe3z7d6h"
+    },
+    "categories": {
+      "auth": {
+        "secretgiftexchange4479a582": {}
+      },
+      "function": {
+        "secretgiftfunc": {
+          "deploymentBucketName": "amplify-secretgiftexchange-dev-222452-deployment",
+          "s3Key": "amplify-builds/secretgiftfunc-4e6a576a68764d566b54-build.zip",
+          "snsTopicArn": "arn:aws:sns:us-east-1:521776702104:amplify-secretgiftexchange-dev-222452-customsnsStack-1J4IWN08EULU4-secretgifttopic791EABC7-B0ZWZTRIGB0F"
+        }
+      }
+    }
+  }
+}

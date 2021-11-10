@@ -1,0 +1,40 @@
+{
+    "paths": [
+        {
+            "name": "/list-sandbox-users",
+            "lambdaFunction": "secretgiftfunc",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST",
+                    "/GET"
+                ]
+            },
+            "policyResourceName": "/list-sandbox-users"
+        }
+    ],
+    "resourceName": "secretgift",
+    "apiName": "secretgift",
+    "functionArns": [
+        {
+            "lambdaFunction": "secretgiftfunc"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "amplify-secretgiftexchange-dev-222452-authRole",
+        "unAuthRoleName": "amplify-secretgiftexchange-dev-222452-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "secretgiftfunc",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "3170d203"
+}

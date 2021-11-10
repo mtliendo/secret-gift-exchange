@@ -1,0 +1,8 @@
+[
+	{
+		"Action": ["SNS:*", "SNS:ListOriginationNumbers"],
+		"Resource": [
+			"arn:aws:sns:us-east-1:521776702104:amplify-secretgiftexchange-dev-222452-customsnsStack-1J4IWN08EULU4-secretgifttopic791EABC7-B0ZWZTRIGB0F"
+		]
+	}
+]
