@@ -18,7 +18,7 @@
       "function": {
         "secretgiftfunc": {
           "deploymentBucketName": "amplify-secretgiftexchange-dev-222452-deployment",
-          "s3Key": "amplify-builds/secretgiftfunc-4e6a576a68764d566b54-build.zip",
+          "s3Key": "amplify-builds/secretgiftfunc-775035677032592f3330-build.zip",
           "snsTopicArn": "arn:aws:sns:us-east-1:521776702104:amplify-secretgiftexchange-dev-222452-customsnsStack-1J4IWN08EULU4-secretgifttopic791EABC7-B0ZWZTRIGB0F"
         }
       }

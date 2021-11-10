@@ -10,7 +10,7 @@ function App() {
 	useEffect(() => {
 		async function fetchVerifiedNumbers() {
 			const phoneData = [
-				{ phoneNumber: '+15555555555', alias: '' },
+				{ phoneNumber: '+5555555555', alias: '' },
 				{ phoneNumber: '+14444444444', alias: '' },
 				{ phoneNumber: '+13333333333', alias: '' },
 			]
@@ -33,8 +33,8 @@ function App() {
 		setPhoneNumbers(updatedPhoneData)
 	}
 
-	const handleMessagePublishClick = () => {
-		console.log({
+	const handleMessagePublishClick = async () => {
+		await API.post('secretgift', '/publish-messages', {
 			body: {
 				phoneNumberData,
 				giftBudget,

@@ -11,6 +11,17 @@
                 ]
             },
             "policyResourceName": "/list-sandbox-users"
+        },
+        {
+            "name": "/publish-messages",
+            "lambdaFunction": "secretgiftfunc",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST"
+                ]
+            },
+            "policyResourceName": "/publish-messages"
         }
     ],
     "resourceName": "secretgift",
@@ -21,7 +32,7 @@
         }
     ],
     "privacy": {
-        "auth": 1,
+        "auth": 2,
         "unauth": 0,
         "authRoleName": "amplify-secretgiftexchange-dev-222452-authRole",
         "unAuthRoleName": "amplify-secretgiftexchange-dev-222452-unauthRole"
@@ -36,5 +47,5 @@
             ]
         }
     ],
-    "uuid": "3170d203"
+    "uuid": "f1a4cf4d"
 }

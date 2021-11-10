@@ -16,12 +16,15 @@ app.use(function (req, res, next) {
 //instead of sandbox, list by topic: https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#listSubscriptionsByTopic-property
 app.get('/list-sandbox-users', async function (req, res) {
 	const numbers = await sns
-		.listOriginationNumbers()
+		.listSMSSandboxPhoneNumbers()
 		.promise()
 		.catch((e) => console.log(e))
 
 	console.log('the numbers', numbers)
-	res.json({ numbers })
+	const verifiedNumbers = numbers.PhoneNumbers.filter(
+		(number) => number.Status === 'Verified'
+	).map((numberItem) => ({ phoneNumber: numberItem.PhoneNumber, alias: '' }))
+	res.json({ verifiedNumbers })
 })
 
 app.post('/publish-messages', async function (req, res) {
@@ -35,7 +38,7 @@ app.post('/publish-messages', async function (req, res) {
 	//call this method for each iteration:
 	await sns
 		.publish({
-			TopicARN: process.env.SNS_TOPIC_ARN,
+			TopicArn: process.env.SNS_TOPIC_ARN,
 			Message: `Your person is SOMEONE. Your budget is $${req.body.giftBudget}`,
 			MessageAttributes: {
 				project: {
